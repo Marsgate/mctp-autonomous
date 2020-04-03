@@ -22,7 +22,7 @@ def turn(amount):
 # negative numbers are backward
 def drive(amount):
     key = 'w'
-    if(distance < 0):
+    if(amount < 0):
         key = 's'
 
     f.write("Send {%c down}\n" % key)
@@ -54,7 +54,7 @@ def cap_flip():
     print("wap")
 
 
-def init(Launcher L):
+def init(L):
     #initialize the launcher type
     global launcher_type
     launcher_type = L

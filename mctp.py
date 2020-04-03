@@ -13,27 +13,27 @@ launcher_type = Launcher.NONE
 # change angle of the robot
 # positive numbers are left
 # negative numbers are right
-def turn(degrees):
-    f.write("DllCall(\"mouse_event\", uint, 1, int, %d, int, 0)\n" % degrees)
+def turn(amount):
+    f.write("DllCall(\"mouse_event\", uint, 1, int, %d, int, 0)\n" % amount)
     f.write("sleep, 100\n")
 
 # drive the robot
 # positive numbers are foward
 # negative numbers are backward
-def drive(distance):
+def drive(amount):
     key = 'w'
     if(distance < 0):
         key = 's'
 
     f.write("Send {%c down}\n" % key)
-    f.write("Sleep, %d\n" % distance)
+    f.write("Sleep, %d\n" % amount)
     f.write("Send {%c up}\n" % key)
 
 # change angle of the launcher
 # positive numbers are up
 # negative numbers are down
-def angle(degrees):
-    f.write("DllCall(\"mouse_event\", uint, 1, int, 0, int, %d)\n" % degrees)
+def angle(amount):
+    f.write("DllCall(\"mouse_event\", uint, 1, int, 0, int, %d)\n" % amount)
     f.write("sleep, 100\n")
 
 # switch to the launcher and fire a projectile

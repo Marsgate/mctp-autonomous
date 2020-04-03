@@ -10,11 +10,6 @@ class Launcher(Enum):
 
 launcher_type = Launcher.NONE
 
-# set the type of launcher
-def set_launcher_type(L):
-    global launcher_type
-    launcher_type = L
-
 # change angle of the robot
 # positive numbers are left
 # negative numbers are right
@@ -59,7 +54,11 @@ def cap_flip():
     print("wap")
 
 
-def init():
+def init(Launcher L):
+    #initialize the launcher type
+    global launcher_type
+    launcher_type = L
+
     # remove old file
     if os.path.exists("autonomous.ahk"):
         os.remove("autonomous.ahk")

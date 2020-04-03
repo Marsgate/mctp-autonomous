@@ -1,6 +1,5 @@
-import library as robot
+import mctp as robot
 
-robot.init()
-robot.set_launcher_type(robot.Launcher.PUNCHER)
-robot.turn(1000)
+robot.init(robot.Launcher.PUNCHER)
+
 robot.end()

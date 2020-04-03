@@ -26,7 +26,13 @@ def turn(degrees):
 # positive numbers are foward
 # negative numbers are backward
 def drive(distance):
-    print("drive distance: ", distance)
+    key = 'w'
+    if(distance < 0):
+        key = 's'
+
+    f.write("Send {%c down}\n" % key)
+    f.write("Sleep, %d\n" % distance)
+    f.write("Send {%c up}\n" % key)
 
 # change angle of the launcher
 # positive numbers are up

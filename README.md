@@ -55,7 +55,7 @@ The following autonomous movements are supported:
 * drawBackTime defaults to a full power bow shot
 
 ### robot.cap_flip()
-* switch to the cap flipper and swing
+* switch to the cap pusher and swing
 
 ### robot.cap_push()
 * switch to open hand and swing

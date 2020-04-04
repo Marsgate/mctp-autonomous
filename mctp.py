@@ -59,7 +59,7 @@ def shoot(drawBackTime = 1000):
         f.write("Click Up Right\n")
         f.write("sleep, 100\n")
 
-# switch to the cap flipper and swing
+# switch to the cap pusher and swing
 def cap_flip():
     global slot
     if (slot != 3):
@@ -71,7 +71,7 @@ def cap_flip():
     f.write("sleep 100\n")
 
 # switch to open hand and swing
-def cap_push():
+def cap_punch():
     global slot
     if (slot != 9):
         f.write("send {9}\n")

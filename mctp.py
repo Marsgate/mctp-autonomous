@@ -27,6 +27,7 @@ def drive(amount):
     key = 'w'
     if(amount < 0):
         key = 's'
+        amount = -amount
 
     f.write("Send {%c down}\n" % key)
     f.write("Sleep, %d\n" % amount)

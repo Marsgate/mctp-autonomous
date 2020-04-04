@@ -35,7 +35,6 @@ The following autonomous movements are supported:
 * changes the angle of the robot
 * positive numbers are left
 * negative numbers are right
-* amount is not measured in degrees and will change depending on mouse dpi
 
 ### robot.drive(distance)
 * drive the robot 
@@ -47,7 +46,6 @@ The following autonomous movements are supported:
 * change angle of the launcher
 * positive numbers are up
 * negative numbers are down
-* amount is not measured in degrees and will change depending on mouse dpi
 
 ### robot.shoot(drawBackTime = 1000)
 * switch to the launcher and fire a projectile

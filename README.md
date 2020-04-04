@@ -1,6 +1,6 @@
 # mctp-autonomous
-This is a programming skills run library for minecraft turning point 
-which can be found [here](https://github.com/OpenGGEngine/TurningPoint)
+This is a autonomous programming library for [minecraft turning point.](https://github.com/OpenGGEngine/TurningPoint)
+It was made with python and autohotkey, and allows users to program completly autonomous in-game movements.
 
 ## Setup
 1. Install [autohotkey](https://www.autohotkey.com/)
@@ -54,7 +54,7 @@ The following autonomous movements are supported:
 * drawBackTime will be ignored by flywheels robots
 * drawBackTime defaults to a full power bow shot
 
-### robot.cap_clip()
+### robot.cap_flip()
 * switch to the cap flipper and swing
 
 ### robot.cap_push()

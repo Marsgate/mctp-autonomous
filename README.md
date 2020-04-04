@@ -55,5 +55,5 @@ The following autonomous movements are supported:
 ### robot.cap_flip()
 * switch to the cap pusher and swing
 
-### robot.cap_push()
+### robot.cap_punch()
 * switch to open hand and swing

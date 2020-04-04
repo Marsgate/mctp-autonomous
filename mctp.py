@@ -3,6 +3,7 @@ import os
 
 global f
 global slot
+global sens
 
 class Launcher(Enum):
     NONE = 0
@@ -15,6 +16,7 @@ launcher_type = Launcher.NONE
 # positive numbers are left
 # negative numbers are right
 def turn(amount):
+    amount *= sens
     f.write("DllCall(\"mouse_event\", uint, 1, int, %d, int, 0)\n" % -amount)
     f.write("sleep, 100\n")
 
@@ -34,6 +36,7 @@ def drive(amount):
 # positive numbers are up
 # negative numbers are down
 def angle(amount):
+    amount *= sens
     f.write("DllCall(\"mouse_event\", uint, 1, int, 0, int, %d)\n" % -amount)
     f.write("sleep, 100\n")
 
@@ -79,7 +82,11 @@ def cap_push():
     f.write("sleep 100\n")
 
 
-def init(L):
+def init(L, scaling = 1):
+    #initialize dpi
+    global sens
+    sens = 6.67175 * scaling
+
     #initialize starting slot
     global slot
     slot = 0

@@ -6,6 +6,7 @@ which can be found [here](https://github.com/OpenGGEngine/TurningPoint)
 1. Install [autohotkey](https://www.autohotkey.com/)
 2. Install [python](https://www.python.org/downloads/)
 3. Download the [latest mctp version](https://github.com/Marsgate/mctp-autonomous/releases)
+4. Set your minecraft in-game sensitivity to 100% (Optional)
 
 ## Creating an autonomous
 All programming should be done inside of `main.py`.
@@ -19,7 +20,7 @@ robot.end()
 ```
 
 * The mctp library is imported to give access to all movement functions
-* The `robot.init()` function must be called with whatever type of launcher you intend to use.
+* The `robot.init()` function must be called with whatever type of launcher you intend to use. You may pass an optional second argument that scales the sensitivity of turning and angling movements.
 * The `robot.drive()` function generates a forward movement measured in milliseconds.
 * The `robot.end()` function is required to make sure the autohotkey script exits properly
 

@@ -1,6 +1,6 @@
 # mctp-autonomous
 This is a autonomous programming library for [minecraft turning point.](https://github.com/OpenGGEngine/TurningPoint)
-It was made with python and autohotkey, and allows users to program completly autonomous in-game movements.
+It was made with python and autohotkey, and allows users to program completely autonomous in-game movements.
 
 ## Setup
 1. Install [autohotkey](https://www.autohotkey.com/)
@@ -24,9 +24,9 @@ robot.end()
 * The `robot.drive()` function generates a forward movement measured in milliseconds.
 * The `robot.end()` function is required to make sure the autohotkey script exits properly
 
-After saving the code in your `main.py` run the file from terminal with the command `python main.py`. This will generate a file named `autonomous.ahk` which can be run by autohotkey. By double clicking on this file, the script should start and an autohotkey icon will appear in the windows task bar. Once the script has been started, you have to reload it after each change to your autonomous program. To do this, right click on the icon and select `Reload this script`
+After saving the code in your `main.py` run the file from the terminal with the command `python main.py`. This will generate a file named `autonomous.ahk` which can be run by autohotkey. By double clicking on this file, the script should start and an autohotkey icon will appear in the windows taskbar. Once the script has been started, you have to reload it after each change to your autonomous program. To do this, right click on the icon and select `Reload this script`
 
-Once you are in game, press `ctrl + j` to start the autonomous program. While the program is active, mouse and keyboard movements will still register, so be careful not to move the mouse after starting the program.
+Once you are in-game, press `ctrl + j` to start the autonomous program. While the program is active, mouse and keyboard movements will still register, so be careful not to move the mouse after starting the program.
 
 ## Supported functionality
 The following autonomous movements are supported:
@@ -38,7 +38,7 @@ The following autonomous movements are supported:
 
 ### robot.drive(distance)
 * drive the robot 
-* positive numbers are foward
+* positive numbers are forward
 * negative numbers are backward
 * distance is measured in milliseconds
 

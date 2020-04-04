@@ -2,6 +2,7 @@ from enum import Enum
 import os
 
 global f
+global slot
 
 class Launcher(Enum):
     NONE = 0
@@ -14,7 +15,7 @@ launcher_type = Launcher.NONE
 # positive numbers are left
 # negative numbers are right
 def turn(amount):
-    f.write("DllCall(\"mouse_event\", uint, 1, int, %d, int, 0)\n" % amount)
+    f.write("DllCall(\"mouse_event\", uint, 1, int, %d, int, 0)\n" % -amount)
     f.write("sleep, 100\n")
 
 # drive the robot
@@ -33,11 +34,17 @@ def drive(amount):
 # positive numbers are up
 # negative numbers are down
 def angle(amount):
-    f.write("DllCall(\"mouse_event\", uint, 1, int, 0, int, %d)\n" % amount)
+    f.write("DllCall(\"mouse_event\", uint, 1, int, 0, int, %d)\n" % -amount)
     f.write("sleep, 100\n")
 
 # switch to the launcher and fire a projectile
 def shoot(drawBackTime = 1000):
+    global slot
+    if (slot != 2):
+        f.write("send {2}\n")
+        f.write("sleep 300\n")
+        slot = 2
+    
     if(launcher_type == Launcher.PUNCHER):
         f.write("Click Down Right\n")
         f.write("sleep %d\n" % drawBackTime)
@@ -51,10 +58,32 @@ def shoot(drawBackTime = 1000):
 
 # switch to the cap flipper and swing
 def cap_flip():
-    print("wap")
+    global slot
+    if (slot != 3):
+        f.write("send {3}\n")
+        f.write("sleep 300\n")
+        slot = 3
+
+    f.write("Click Left\n")
+    f.write("sleep 100\n")
+
+# switch to open hand and swing
+def cap_push():
+    global slot
+    if (slot != 9):
+        f.write("send {9}\n")
+        f.write("sleep 300\n")
+        slot = 9
+
+    f.write("Click Left\n")
+    f.write("sleep 100\n")
 
 
 def init(L):
+    #initialize starting slot
+    global slot
+    slot = 0
+
     #initialize the launcher type
     global launcher_type
     launcher_type = L
